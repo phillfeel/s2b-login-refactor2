@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/login-page.css">
+  <title>Screen2b</title>
+  <link href="img/screen2b_logo_big.png" rel="icon" type="image/png" />
+  <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="style/ie9-only.css">
+  <![endif]-->
+</head>
+
+<body>
+  <div class="layout">
+    <div class="form-wrap">
+      <!-- action="/Authorization/SignIn" /Authorization/SignIn -->
+      <div class="lang-drop" id="dd1"></div>
+      <form acrion="" class='myform f-signin' id="signin" method="POST">
+        <a href="http://screen2b.ru/">
+          <img src="img/s2b_logo.svg" alt="screen2b-logo" style="object-fit: cover;" />
+        </a>
+        <div class="section-header-wrapper__form">
+          <div class="field section-header-wrapper__form-input">
+            <input class="translation" autocomplete="off" data-val="true" data-val-regex="Wrong e-mail format"
+            data-val-regex-pattern="^([0-9a-zA-Z]+[-._+&amp;])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$"
+            data-val-required="Введите логин" id="id1" name="Email" type="text" placeholder="Логин"  value=""/>
+            <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+          </div>
+
+          <div class="field section-header-wrapper__form-input">
+            <input autocomplete="off" data-val="true" data-val-required="Введите пароль"
+            name="Password" class="translation" id="id2" name="password" type="password" 
+            placeholder="Пароль" />
+            <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+          </div>
+          
+          <div>
+            <span class="field-validation-valid" data-valmsg-for="##Form"
+                data-valmsg-replace="true"></span>
+          </div>
+
+          <input id="ReturnUrl" name="ReturnUrl" type="hidden" value="" />
+                        <input data-val="true" data-val-required="The BrandType field is required." id="BrandType" name="BrandType"
+                            type="hidden" value="Screen2b" /><input data-val="true"
+                            data-val-required="The HasOffer field is required." id="HasOffer" name="HasOffer"
+                            type="hidden" value="True"/>
+
+          <div class="section-header-wrapper__form-button">
+            <button type="submit" class="button-original long">
+              <p class="translation" id="id3">войти</p><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"
+                  fill="none"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="backsay translation" id="id6"></div>
+        </div>
+      </form>
+
+      <div class="copyright">
+        <p class="sybol">&copy; Screen2b, 2020,</p>
+        <p class="translation" id="id4"> Все права защищены</p>
+        <span class="sign-in-offer">
+          <img src="img/doc.svg" alt="">
+          <a class="translation" id="id5"
+            href="https://docs.google.com/viewerng/viewer?url=https://monitorfiles.1mt.ru/Offer/Screen2bOffer.pdf"
+            target="_blank">Договор оферты</a></span>
+      </div>
+     
+    </div>
+    <div class="slider-wrap">
+      <div class="slideshow">
+
+        <div class="mySlides fade">
+          <div class="img-slider first"></div>
+          <div class="blackout"></div>
+          <div class="lightout"></div>
+          <div class="text slide"><h3 class="translation"  id="id7">Облачная платформа для управления цифровыми поверхностями</h3></div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="img-slider second"></div>
+          <div class="blackout"></div>
+          <div class="lightout"></div>
+          <div class="text slide" id="8"><h3 class="translation"  id="id8">Самое доступное решение в области Digital Signage для экранов</h3></div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="img-slider third"></div>
+          <div class="blackout"></div>
+          <div class="lightout"></div>
+          <div class="text slide" id="7"><h3 class="translation"  id="id7">Облачная платформа для управления цифровыми поверхностями</h3></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/login-page.js">
+  </script>
+</body>
+
+</html>
