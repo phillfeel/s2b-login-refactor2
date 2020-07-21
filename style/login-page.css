@@ -228,8 +228,8 @@ body {
 .f-signin .field-validation-error,
 .f-signup .field-validation-error {
     position: absolute;
-    top: 7px;
-    left: 208px;
+    top: 15px;
+    left: 270px;
     white-space: nowrap;
     line-height: 1;
     color: #ed4a30

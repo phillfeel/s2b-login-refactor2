@@ -23,15 +23,15 @@
         </a>
         <div class="section-header-wrapper__form">
           <div class="field section-header-wrapper__form-input">
-            <input class="translation" autocomplete="off" data-val="true" data-val-regex="Wrong e-mail format"
+            <input class="input-field translation" autocomplete="off" data-val="true" data-val-regex="Wrong e-mail format"
             data-val-regex-pattern="^([0-9a-zA-Z]+[-._+&amp;])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$"
             data-val-required="Введите логин" id="id1" name="Email" type="text" placeholder="Логин"  value=""/>
             <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
           </div>
 
           <div class="field section-header-wrapper__form-input">
-            <input autocomplete="off" data-val="true" data-val-required="Введите пароль"
-            name="Password" class="translation" id="id2" name="password" type="password" 
+            <input class="input-field translation" autocomplete="off" data-val="true" data-val-required="Введите пароль"
+            name="Password" id="id2" name="password" type="password" 
             placeholder="Пароль" />
             <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
           </div>
@@ -48,7 +48,7 @@
                             type="hidden" value="True"/>
 
           <div class="section-header-wrapper__form-button">
-            <button type="submit" class="button-original long">
+            <button type="submit" id="btn-login" class="button-original long">
               <p class="translation" id="id3">войти</p><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -101,6 +101,8 @@
 
   <script src="js/login-page.js">
   </script>
+   <script src="js/app.min.js">
+   </script>
 </body>
 
 </html>

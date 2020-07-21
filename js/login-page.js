@@ -1,6 +1,30 @@
 // --- VALIDATION FORM --- //
 
+var changeColorField = function () {
+    var inputFields = document.getElementsByClassName("input-field");
 
+    var fieldValidations = document.getElementsByClassName("field-validation-valid");
+    
+    var btnLogin = document.getElementById("btn-login");
+    var emailValid = fieldValidations[0]
+
+    btnLogin.onclick = function (){
+        console.log('click');
+        function checkk(){
+            console.log(emailValid);
+            console.log(emailValid.innerText);
+            if(emailValid.innerText !== ""){
+                console.log(emailValid);
+                inputFields[0].style.border = "1px solid #ed4a30";
+            }else{
+            };
+        };
+        setTimeout(checkk, 50);
+        
+    }
+};
+
+changeColorField();
 
 
 //--- SLIDER ---//
