@@ -23,24 +23,23 @@
         </a>
         <div class="section-header-wrapper__form">
           <div class="field section-header-wrapper__form-input">
-            <input class="input-field translation" autocomplete="off" data-val="true" data-val-regex="Wrong e-mail format"
+            <input class="input-field for_translation" autocomplete="off" data-val="true" data-val-regex="Wrong e-mail format"
             data-val-regex-pattern="^([0-9a-zA-Z]+[-._+&amp;])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$"
-            data-val-required="Введите логин" id="id1" name="Email" type="text" placeholder="Логин"  value=""/>
-            <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            data-val-required="Введите логин" id="login_txt" name="Email" type="text" placeholder="Логин"  value=""/>
+             <span class="login-message field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span> 
           </div>
 
           <div class="field section-header-wrapper__form-input">
-            <input class="input-field translation" autocomplete="off" data-val="true" data-val-required="Введите пароль"
-            name="Password" id="id2" name="password" type="password" 
+            <input class="input-field for_translation" autocomplete="off" data-val="true" data-val-required="Введите пароль"
+            name="Password" id="password_txt" name="password" type="password" 
             placeholder="Пароль" />
-            <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            <span class="password-message field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span> 
           </div>
           
           <div>
             <span class="field-validation-valid" data-valmsg-for="##Form"
                 data-valmsg-replace="true"></span>
           </div>
-
           <input id="ReturnUrl" name="ReturnUrl" type="hidden" value="" />
                         <input data-val="true" data-val-required="The BrandType field is required." id="BrandType" name="BrandType"
                             type="hidden" value="Screen2b" /><input data-val="true"
@@ -49,7 +48,7 @@
 
           <div class="section-header-wrapper__form-button">
             <button type="submit" id="btn-login" class="button-original long">
-              <p class="translation" id="id3">войти</p><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+              <p class="for_translation" id="button_txt">войти</p><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"
@@ -57,16 +56,15 @@
               </svg>
             </button>
           </div>
-          <div class="backsay translation" id="id6"></div>
         </div>
       </form>
 
       <div class="copyright">
         <p class="sybol">&copy; Screen2b, 2020,</p>
-        <p class="translation" id="id4"> Все права защищены</p>
+        <p class="rights for_translation" id="rights_txt"> Все права защищены</p>
         <span class="sign-in-offer">
           <img src="img/doc.svg" alt="">
-          <a class="translation" id="id5"
+          <a class="offer for_translation" id="offer_txt"
             href="https://docs.google.com/viewerng/viewer?url=https://monitorfiles.1mt.ru/Offer/Screen2bOffer.pdf"
             target="_blank">Договор оферты</a></span>
       </div>
@@ -74,35 +72,32 @@
     </div>
     <div class="slider-wrap">
       <div class="slideshow">
-
-        <div class="mySlides fade">
+        <div class="mySlides">
           <div class="img-slider first"></div>
           <div class="blackout"></div>
           <div class="lightout"></div>
-          <div class="text slide"><h3 class="translation"  id="id7">Облачная платформа для управления цифровыми поверхностями</h3></div>
+          <div class="text slide"><h3 class="title-slide for_translation"  id="slide_txt1">Облачная платформа для управления цифровыми поверхностями</h3></div>
         </div>
 
-        <div class="mySlides fade">
+        <div class="mySlides">
           <div class="img-slider second"></div>
           <div class="blackout"></div>
           <div class="lightout"></div>
-          <div class="text slide" id="8"><h3 class="translation"  id="id8">Самое доступное решение в области Digital Signage для экранов</h3></div>
+          <div class="text slide" ><h3 class="title-slide for_translation"  id="slide_txt2">Самое доступное решение в области Digital Signage для экранов</h3></div>
         </div>
 
-        <div class="mySlides fade">
+        <div class="mySlides">
           <div class="img-slider third"></div>
           <div class="blackout"></div>
           <div class="lightout"></div>
-          <div class="text slide" id="7"><h3 class="translation"  id="id7">Облачная платформа для управления цифровыми поверхностями</h3></div>
+          <div class="text slide" ><h3 class="title-slide for_translation"  id="slide_txt1">Облачная платформа для управления цифровыми поверхностями</h3></div>
         </div>
       </div>
     </div>
   </div>
-  
-  <script src="js/login-page.js">
-  </script>
-   <script src="js/app.min.js">
-   </script>
+
+  <script src="js/login-page.js"></script>
+  <script src="js/app.min.js"></script>
 </body>
 
 </html>

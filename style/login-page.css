@@ -211,14 +211,13 @@ body {
 }
 
 .myform .backsay {
-  display: block;
+  display: inline-block;
   opacity: 0;
   font-size: 12px;
   color: gray;
   min-height: 30px;
   width: 100%;
 }
-
 
 .f-signin .field,
 .f-signup .field {
@@ -227,18 +226,14 @@ body {
 
 .f-signin .field-validation-error,
 .f-signup .field-validation-error {
-    position: absolute;
-    top: 15px;
-    left: 270px;
+  position: absolute;
+  top: 15px;
+  left: 270px;
     white-space: nowrap;
     line-height: 1;
     color: #ed4a30
 }
 
-/* .language, .language > *{
-  display:inline-block;
-  text-align: center;
-} */
 .copyright {
   height: 60px;
   text-align: center;
@@ -268,7 +263,7 @@ body {
 }
 
 .copyright .sign-in-offer a:hover {
-  color: black;
+  color: #404040;
 }
 
 .slider-wrap * {
@@ -283,23 +278,11 @@ body {
 }
 
 .slider-wrap .mySlides {
-  /* display: none; */
   visibility: hidden;
   height: 102vh;
   width: 100%;
   overflow: hidden;
 }
-
-/* .slider-wrap .mySlides img {
-  position: relative;
-  width: 100%;
-  height: 102vh;
-  -o-object-fit: cover;
-  object-fit: cover;
-} */
-
-
-
 
 .slider-wrap .mySlides .img-slider {
   overflow: hidden;
@@ -313,7 +296,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 1s ease;
-  /* animation: scale 5s linear; */
 }
 
 .slider-wrap .mySlides .img-slider.first {
@@ -390,7 +372,7 @@ body {
 
 .slider-wrap .mySlides .text {
   padding: 40px 30px 30px 30px;
-  padding-left: 40px;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -402,32 +384,6 @@ body {
 .slider-wrap .active,
 .slider-wrap .dot:hover {
   background-color: #717171;
-}
-
-.slider-wrap .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  -webkit-animation-duration: 3.5s;
-          animation-duration: 3.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .5;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .5;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .lang-drop {
@@ -481,10 +437,10 @@ body {
 .dropdown_panel {
   position: absolute;
   background: transparent;
-  width: calc(100% + 11px);
+  width: calc(100% + 13px);
   z-index: 9999;
   height: 203px;
-  left: 0px;
+  left: -1px;
   top: 26px;
   overflow: hidden;
   pointer-events: none;
@@ -544,7 +500,6 @@ body {
   }
 }
 
-
 h3{
   font-weight: 700;
   text-transform: uppercase;
@@ -559,14 +514,28 @@ h3{
     font-size: 28px;
   }
 }
-@media (max-width: 920px) {
+@media (max-width: 930px) {
   h3{
     font-size: 20px;
   }
+  .f-signin .login-message{
+  position: absolute;
+  top: 185px;
+  left: 0px;
+  white-space: nowrap;
+  line-height: 5px;
+  color: #ed4a30
 }
+  .f-signin .password-message {
+    top: 155px;
+    left: 0px;
+  }
 
+}
+  
+/* стили только для IE10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  /* стили только для IE10+ */
+
   .slider-wrap * {
     display: none;
   }
@@ -575,7 +544,6 @@ h3{
     border-radius: 0;
   }
   .form-wrap{
-    /* background: url(../img/slider_air.jpg); */
     background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5) ), url('../img/slider_air.jpg');
     background-position: center;
     background-repeat: no-repeat;

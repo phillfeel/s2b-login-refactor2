@@ -36,14 +36,14 @@ function showSlides() {
     for (var i = 0; i < slides.length; i++) {
         slides[i].style.visibility = "hidden";
         slides[i].childNodes[1].classList.remove("active");
-        slides[i].childNodes[7].classList.remove("show");
+        slides[i].childNodes[5].classList.remove("show");
     }
     slideIndex++;
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
     slides[slideIndex - 1].childNodes[1].classList.add("active");
-    slides[slideIndex - 1].childNodes[7].classList.add("show");
+    slides[slideIndex - 1].childNodes[5].classList.add("show");
 
     checkActive(slides[slideIndex - 1].childNodes[1], slides[slideIndex - 1]);
 }
@@ -53,77 +53,65 @@ function showSlides() {
 var allDictionary = {
     dictRussian: {
         nameLanguage: "Русский",
-        id1: "Логин",
-        id2: "Пароль",
-        id3: "Войти",
-        id4: "Все права защищены",
-        id5: "Договор оферты",
-        id6: "Логин и пароль должны быть больше 3 символов",
-        id7: "Облачная платформа для управления цифровыми поверхностями",
-        id8: "Самое доступное решение в области Digital Signage для экранов"
+        login_txt: "Логин",
+        password_txt: "Пароль",
+        button_txt: "Войти",
+        rights_txt: "Все права защищены",
+        offer_txt: "Договор оферты",
+        slide_txt1: "Облачная платформа для управления цифровыми поверхностями",
+        slide_txt2: "Самое доступное решение в области Digital Signage для экранов"
     },
     dictEnglish: {
         nameLanguage: "English",
-        id1: "Login",
-        id2: "Password",
-        id3: "sign in",
-        id4: "All right is reserved",
-        id5: "Terms and Conditions",
-        id6: "Login and password must be more than 3 characters",
-        id7: "Cloud-based digital surface management platform",
-        id8: "The most affordable Digital Signage solution for media screens",
+        login_txt: "Login",
+        password_txt: "Password",
+        button_txt: "sign in",
+        rights_txt: "All rights is reserved",
+        offer_txt: "Terms and Conditions",
+        slide_txt1: "Cloud-based digital surface management platform",
+        slide_txt2: "The most affordable Digital Signage solution for media screens",
     },
     dictSpain: {
         nameLanguage: "España",
-        id1: "el login",
-        id2: "contraseña",
-        id3: "registrarse",
-        id4: "Todos los derechos estan reservados",
-        id5: "Términos y Condiciones",
-        id6: "El inicio de sesión y la contraseña deben tener más de 3 caracteres",
-        id7: "Plataforma de gestión de superficie digital basada en la nube",
-        id8: "La solución de señalización digital más asequible para pantallas",
+        login_txt: "el login",
+        password_txt: "contraseña",
+        button_txt: "registrarse",
+        rights_txt: "Todos los derechos estan reservados",
+        offer_txt: "Términos y Condiciones",
+        slide_txt1: "Plataforma de gestión de superficie digital basada en la nube",
+        slide_txt2: "La solución de señalización digital más asequible para pantallas",
     },
     dictChinese: {
         nameLanguage:  "中文",
-        id1: "登錄",
-        id2: "密碼",
-        id3: "登入",
-        id4: "保留所有權利",
-        id5: "條款和條件",
-        id6: "登錄名和密碼必須超過3個字符",
-        id7: "基於雲的數字表面管理平台",
-        id8: "最實惠的屏幕數字標牌解決方案"
+        login_txt: "登錄",
+        password_txt: "密碼",
+        button_txt: "登入",
+        rights_txt: "保留所有權利",
+        offer_txt: "條款和條件",
+        slide_txt1: "基於雲的數字表面管理平台",
+        slide_txt2: "最實惠的屏幕數字標牌解決方案"
     },
     dictFrance: {
         nameLanguage: "Français",
-        id1: "S'identifier",
-        id2: "Mot de passe",
-        id3: "Entrer",
-        id4: "Tous les droits sont réservés",
-        id5: "Offre de contrat",
-        id6: "Le nom d'utilisateur et le mot de passe doivent comporter plus de 3 caractères",
-        id7: "Plateforme de gestion de surface numérique basée sur le cloud",
-        id8: "La solution d'affichage numérique la plus abordable pour les écrans"
+        login_txt: "S'identifier",
+        password_txt: "Mot de passe",
+        button_txt: "Entrer",
+        rights_txt: "Tous les droits sont réservés",
+        offer_txt: "Offre de contrat",
+        slide_txt1: "Plateforme de gestion de surface numérique basée sur le cloud",
+        slide_txt2: "La solution d'affichage numérique la plus abordable pour les écrans"
     }
 }
 
 function changeLanguage(language) {
-    var allTranslate = document.getElementsByClassName('translation');
+    var allTranslate = document.getElementsByClassName('for_translation');
     var slideH3 = document.getElementsByClassName('text slide');
     for (translate of allTranslate) {
-        for (elem of slideH3) {
-            if (language === "中文") {
-                elem.style.textIndent = "7em";
-            } else {
-                elem.style.textIndent = "0";
-            }
-        };
         for (var key in allDictionary) { 
             var anyDict = allDictionary[key]
             if(anyDict.nameLanguage === language){
                 var newWord = anyDict[translate.id];
-                if (translate.id === "id1" || translate.id === "id2") {
+                if (translate.id === "login_txt" || translate.id === "password_txt") {
                     translate.placeholder = newWord;
                 } else {
                     translate.innerText = newWord;
@@ -135,12 +123,16 @@ function changeLanguage(language) {
 
 // --- DROPDOWN --- //
 
+var dropdowns = {};
+
+function getdd (elem){
+	var id = elem.closest('.dropdown').parentElement.id;
+  return dropdowns[id];
+}
+
 function Dropdown(o) {
     this.options = o;
-    window.getdd = function (elem) {
-        var idDropdown = elem.closest('.dropdown').parentElement.id;
-        return window.dropdowns[idDropdown];
-    }
+
     this.init = function () {
         this.elem = document.getElementById(this.options.id);
         var htmlDropdown =
@@ -155,8 +147,8 @@ function Dropdown(o) {
         document.addEventListener("mousedown", function () {
             if (self.isVisible) self.hide();
         });
-        if (!window.dropdowns) window.dropdowns = {};
-        window.dropdowns[this.options.id] = this;
+        if (dropdowns) dropdowns = {};
+        dropdowns[this.options.id] = this;
         this.elem.style.display = 'inline-block';
         this.elem.innerHTML = htmlDropdown;
         var elem = this.elem;
@@ -191,8 +183,8 @@ function Dropdown(o) {
             this.options.cb(newval);
     }
     this.show = function () {
-        for (var dd in window.dropdowns)
-            window.dropdowns[dd].hide();
+        for (var dd in dropdowns)
+            dropdowns[dd].hide();
 
         this.isVisible = true;
         this.items.style.transform = 'translate(0px,0px)';
