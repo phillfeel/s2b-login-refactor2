@@ -559,11 +559,7 @@ h3{
   }
   
   .myform img{
-    display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url(../img/S2B_Logo.png) no-repeat;
-  border: none;
+    border: none;
   } 
   
   .copyright .sign-in-offer a:hover {
