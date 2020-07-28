@@ -568,3 +568,10 @@ h3{
   
 }
 
+/* стили только для EDGE 12+ */
+@supports (-ms-ime-align:auto) {
+  .myform .button-original {
+    border-radius: 0;
+  }
+}
+
