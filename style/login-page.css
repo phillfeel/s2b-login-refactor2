@@ -559,19 +559,20 @@ h3{
     border: 1px solid #c7c7d0;
   }
   
-  /* .myform img{
-    display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url(../img/S2B_Logo.png) no-repeat;
-  border: none;
-  }  */
   .myform img{
     border: none;
   }
+  
   .copyright .sign-in-offer a:hover {
     color: orange;
   }
   
+}
+
+/* стили только для EDGE 12+ */
+@supports (-ms-ime-align:auto) {
+  .myform .button-original {
+    border-radius: 0;
+  }
 }
 
