@@ -48,6 +48,36 @@ function showSlides() {
     checkActive(slides[slideIndex - 1].childNodes[1], slides[slideIndex - 1]);
 }
 
+// --- input login, pass validation --- //
+
+function loginValidation(event){
+    target = event.target;
+    const loginMessage = document.querySelector('.login-message');
+    if (target.value === ""){
+        loginMessage.innerText = "Введите логин";
+        target.classList.add("field-validation-on");
+    } else {
+        loginMessage.innerText = "";
+        target.classList.remove("field-validation-on");
+    }
+};
+document.querySelector(".login-field").addEventListener('input', loginValidation);
+
+
+function passValidation(event){
+    target = event.target;
+    const passMessage = document.querySelector('.password-message');
+    if (target.value === ""){
+        passMessage.innerText = "Введите пароль";
+        target.classList.add("field-validation-on");
+    } else {
+        passMessage.innerText = "";
+        target.classList.remove("field-validation-on");
+    }
+};
+document.querySelector(".pass-field").addEventListener('input', passValidation);
+
+
 // --- CHANGE LANGUAGE --- //
 
 var allDictionary = {
@@ -59,7 +89,12 @@ var allDictionary = {
         rights_txt: "Все права защищены",
         offer_txt: "Договор оферты",
         slide_txt1: "Облачная платформа для управления цифровыми поверхностями",
-        slide_txt2: "Самое доступное решение в области Digital Signage для экранов"
+        slide_txt2: "Самое доступное решение в области Digital Signage для экранов",
+
+        login_empty: "Введите логин",
+        password_empty: "Введите пароль",
+        login_wrong_format: "Неверный формат",
+        wrong_form: "Неверный логин или пароль"
     },
     dictEnglish: {
         nameLanguage: "English",
@@ -70,6 +105,11 @@ var allDictionary = {
         offer_txt: "Terms and Conditions",
         slide_txt1: "Cloud-based digital surface management platform",
         slide_txt2: "The most affordable Digital Signage solution for media screens",
+
+        login_empty: "Enter login",
+        password_empty: "Enter password",
+        login_wrong_format: "Wrong format",
+        wrong_form: "Wrong login or password"
     },
     dictSpain: {
         nameLanguage: "España",
@@ -80,6 +120,11 @@ var allDictionary = {
         offer_txt: "Términos y Condiciones",
         slide_txt1: "Plataforma de gestión de superficie digital basada en la nube",
         slide_txt2: "La solución de señalización digital más asequible para pantallas",
+
+        login_empty: "Ingrese login",
+        password_empty: "introducir la contraseña",
+        login_wrong_format: "Formato erróneo",
+        wrong_form: "Usuario o contraseña incorrectos"
     },
     dictChinese: {
         nameLanguage:  "中文",
@@ -89,7 +134,12 @@ var allDictionary = {
         rights_txt: "保留所有權利",
         offer_txt: "條款和條件",
         slide_txt1: "基於雲的數字表面管理平台",
-        slide_txt2: "最實惠的屏幕數字標牌解決方案"
+        slide_txt2: "最實惠的屏幕數字標牌解決方案",
+
+        login_empty: "輸入登錄名",
+        password_empty: "輸入密碼",
+        login_wrong_format: "格式錯誤",
+        wrong_form: "錯誤的登錄名或密碼"
     },
     dictFrance: {
         nameLanguage: "Français",
@@ -99,7 +149,12 @@ var allDictionary = {
         rights_txt: "Tous les droits sont réservés",
         offer_txt: "Offre de contrat",
         slide_txt1: "Plateforme de gestion de surface numérique basée sur le cloud",
-        slide_txt2: "La solution d'affichage numérique la plus abordable pour les écrans"
+        slide_txt2: "La solution d'affichage numérique la plus abordable pour les écrans",
+
+        login_empty: "Entrez votre identifiant",
+        password_empty: "Entrer le mot de passe",
+        login_wrong_format: "Mauvais format",
+        wrong_form: "Identifiant ou mot de passe incorrect"
     }
 }
 

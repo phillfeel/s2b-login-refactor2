@@ -71,6 +71,27 @@ body {
   flex-direction: column;
 }
 
+/* --- Login Validation --- */
+
+.login-message{
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  left: 105%;
+  color: red;
+}
+
+.password-message{
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  left: 105%;
+  color: red;
+}
+
+
+/* --- //Login Validation --- */
+
 .myform {
   margin-left: auto;
   margin-right: auto;
@@ -109,6 +130,14 @@ body {
   padding-left: 15px;
   transition: all 0.2s ease-in;
 }
+
+.myform input.field-validation-on {
+  border: 1px solid #ff0000;
+}
+.myform input.field-validation-on:focus {
+  border: 1px solid #ff0000;
+}
+
 
 .myform input::-webkit-input-placeholder {
   color: #c7c7d0;
@@ -575,4 +604,5 @@ h3{
     border-radius: 0;
   }
 }
+
 
